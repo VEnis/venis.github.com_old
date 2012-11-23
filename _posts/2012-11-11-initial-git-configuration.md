@@ -1,16 +1,15 @@
 ---
 layout: post
 title: "Initial Git configuration"
-description: "abc"
+description: "Some useful Git customization"
 category: 
 tags: [git]
 tagline:
-published: false
+published: true
 ---
 {% include JB/setup %}
 
-
-http://git-scm.com/book/ch1-5.html
+After Git is set up it is good idea to customize it.
 
 ## Information to identify Yourself
 
@@ -19,7 +18,7 @@ http://git-scm.com/book/ch1-5.html
 
 ## Preferred editor
 
-	git config --global core.editor emacs
+	git config --global core.editor nano
 
 ## Diff/Merge tool
 
@@ -27,17 +26,34 @@ http://git-scm.com/book/ch1-5.html
 
 ## Prevent some possible problems
 
-push.default
+Defines the action git push should take if no refspec is given on the command line, no refspec is configured in the
+remote, and no refspec is implied by any of the options given on the command line. "Current" means push the current
+branch to a branch of the same name.
+
+    git config --global push.default current
 
 ## Useful configuration
 
-core.excludesfile
-commit.template
+Here are some useful configuration values described.
 
+In addition to .gitignore (per-directory) and .git/info/exclude, git looks into this file for patterns of files which
+are not meant to be tracked. "~/" is expanded to the value of $HOME and "~user/" to the specified user’s home directory
+
+    git config --global core.excludesfile <path to file>
+
+Specify a file to use as the template for new commit messages. "~/" is expanded to the value of $HOME and "~user/"
+to the specified user’s home directory.
+
+    git config --global commit.template <path to file>
 
 ## Useful commands
 
-http://oli.jp/2012/git-powerup/
-word diff
-log --decorate
-status -s -b
+Here are some useful commands described
+
+Displaying console graph log
+
+    git log --oneline --graph --decorate
+
+Show a word diff highlighting changed words using only colors
+
+    git diff --word-diff=color
