@@ -2,8 +2,8 @@
 layout: post
 title: "The fastest way to start cmd.exe in current explorer folder"
 description: ""
-category: 
-tags: [tip]
+category: Tips
+tags: [cmd,explorer]
 ---
 {% include JB/setup %}
 

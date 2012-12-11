@@ -2,7 +2,7 @@
 layout: post
 title: "Initial Git configuration"
 description: "Some useful Git customization"
-category: 
+category: Source Control System
 tags: [git]
 tagline:
 published: true

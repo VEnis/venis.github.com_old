@@ -2,7 +2,7 @@
 layout: post
 title: "Easy Powershell modules installation with PsGet"
 description: ""
-category: 
+category: Powershell
 tags: []
 published: false
 ---
